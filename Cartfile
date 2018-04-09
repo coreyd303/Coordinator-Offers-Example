@@ -1,0 +1,4 @@
+github "rs/SDWebImage"
+github "SwiftyJSON/SwiftyJSON"
+github "Quick/Quick"
+github "Quick/Nimble"

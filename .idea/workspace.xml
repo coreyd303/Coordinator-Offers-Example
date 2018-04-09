@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d94b587a-a672-4361-86ac-22ab9225126b" name="Default" comment="" />
+    <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Offers-haccfhjftlesfmerymtaqvtdzzrq/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="OfferDetailController.swift" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailController.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="219">
+                  <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OffersCell.swift" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Offers/Offers/Cells/OffersCell.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="686">
+                  <caret line="85" column="125" selection-start-line="85" selection-start-column="125" selection-end-line="85" selection-end-column="125" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OffersUITests.swift" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OffersUITests/OffersUITests.swift">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="OffersViewModelImplementationSpec.swift" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OffersViewModelImplementationSpec.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OffersControllerSpec.swift" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OffersControllerSpec.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="292">
+                  <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OffersCoordinatorImplementationSpec.swift" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Coordinator/OffersCoordinatorImplementationSpec.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="397">
+                  <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OfferDetailControllerSpec.swift" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OfferDetailControllerSpec.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="348">
+                  <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Spec" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rootcon</find>
+      <find>makeRouter</find>
+      <find>equatable</find>
+      <find>i</find>
+      <find>init(style: UITableViewCellStyle, reuseIdentifier: String?)</find>
+      <find>viewModel.favorableOffer</find>
+      <find>style</find>
+      <find>UITableViewCellStyle</find>
+      <find>init</find>
+      <find>named:</find>
+      <find>placehold</find>
+      <find>uifont</find>
+      <find>itemsize</find>
+      <find>currentValueLabel</find>
+      <find>describe(&quot;init</find>
+      <find>favoriteImageView</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Offers/Offers/Models/Offer.swift" />
+        <option value="$PROJECT_DIR$/Offers/Helpers/Color.swift" />
+        <option value="$PROJECT_DIR$/Offers/Helpers/UIColor.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Coordinator/OffersPresentableFactory.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Models/FavorableOffer.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Cells/OfferDetailImageCell.swift" />
+        <option value="$PROJECT_DIR$/Offers/Helpers/Image.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailView.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Cells/OfferDetailHeaderView.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Cells/OfferDetailCell.swift" />
+        <option value="$PROJECT_DIR$/Offers/Helpers/Font.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OffersView.swift" />
+        <option value="$PROJECT_DIR$/Cartfile" />
+        <option value="$PROJECT_DIR$/Offers/Navigation/Router.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Navigation/Mocks/MockRouter.swift" />
+        <option value="$PROJECT_DIR$/Offers/Launch/Coordinator/AppCoordinator.swift" />
+        <option value="$PROJECT_DIR$/Offers/Launch/AppDelegate.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/MockAppPresentableFacory.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/MockAppChildCoordinatorFactory.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/MockWindowProviding.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/MockOffersCoordinator.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Navigation/UINavigationControllerSpec.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Coordinator/OffersCoordinator.swift" />
+        <option value="$PROJECT_DIR$/Offers/Launch/Coordinator/AppChildCoordinatorFactory.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Coordinator/MockOffersPresentableFactory.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Coordinator/MockOffersPresentable.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Coordinator/MockOfferDetailPresentable.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Coordinator/OffersCoordinatorImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Coordinator/OffersPresentableFactoryImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Navigation/RouterImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Navigation/UIWindowSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Navigation/UIViewControllerSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppChildCoordinatorFactoryImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppCoordinatorImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppPresentableFactoryImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/OfferServiceImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/MockOffersViewModel.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/MockOffersView.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OffersController.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OffersViewModel.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/MockOfferService.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/OffersViewModelImplementationSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/MockOfferDetailViewModel.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/OffersDetailControllerSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/MockOfferDetailView.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/OffersControllerSpec.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailViewModel.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailController.swift" />
+        <option value="$PROJECT_DIR$/OffersTests/Offers/Screens/OfferDetailControllerSpec.swift" />
+        <option value="$PROJECT_DIR$/OffersUITests/OffersUITests.swift" />
+        <option value="$PROJECT_DIR$/Offers/Offers/Cells/OffersCell.swift" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+              <item name="Screens" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="OffersTests" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="OffersTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="OffersTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+              <item name="Coordinator" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Offers" type="1d218c8b:XcodeProjectNode" />
+              <item name="OffersTests" type="fcab9f18:XcodeViewNode" />
+              <item name="Offers" type="fcab9f18:XcodeViewNode" />
+              <item name="Screens" type="fcab9f18:XcodeViewNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="OffersTests" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Offers.xcodeproj" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Offers" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offers" TARGET_NAME="Offers" CONFIG_NAME="Debug" SCHEME_NAME="Offers" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="Offers" RUN_TARGET_NAME="Offers" MAKE_ACTIVE="TRUE">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+    </configuration>
+    <configuration name="OffersUITests" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Offers" TARGET_NAME="Offers" CONFIG_NAME="Debug" SCHEME_NAME="OffersUITests" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="Offers" RUN_TARGET_NAME="Offers" MAKE_ACTIVE="TRUE">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Offers" />
+      <item itemvalue="Application.OffersUITests" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d94b587a-a672-4361-86ac-22ab9225126b" name="Default" comment="" />
+      <created>1522982521015</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522982521015</updated>
+      <workItem from="1522982522685" duration="546000" />
+      <workItem from="1522983092529" duration="55000" />
+      <workItem from="1522983163508" duration="4449000" />
+      <workItem from="1523065791111" duration="33464000" />
+      <workItem from="1523203429118" duration="13841000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AllTests - 2018.04.08 at 16h 43m 07s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 16h 49m 37s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 16h 54m 22s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 16h 56m 17s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 16h 58m 54s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 16h 59m 21s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 17h 01m 28s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 17h 01m 32s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 17h 01m 48s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="AllTests - 2018.04.08 at 17h 01m 59s.xml">
+      <configuration name="AllTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="52355000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.17420067" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15986769" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18927065" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3109151" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15986769" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18927065" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39911798" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.17420067" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailController.swift</url>
+          <line>50</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/OffersTests/Offers/Screens/OfferDetailControllerSpec.swift</url>
+          <line>91</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailController.swift</url>
+          <line>49</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="19" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Offers/Coordinator/Coordinator.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/ErrorHandling/JSONError.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Helpers/UIColor.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cartfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Helpers/Color.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OffersView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/Mocks/MockRouter.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Launch/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/Mocks/MockAppPresentableFacory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/Mocks/MockAppChildCoordinatorFactory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/Mocks/MockWindowProviding.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Launch/Coordinator/AppCoordinator.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Launch/Coordinator/AppPresentableFactory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/PresentableSpec.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Navigation/Presentable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/OffersTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Navigation/WindowProviding.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Navigation/Router.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Launch/Coordinator/AppChildCoordinatorFactory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="11" column="117" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Coordinator/OffersCoordinator.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOffersPresentableFactory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOffersPresentable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOfferDetailPresentable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Coordinator/OffersPresentableFactory.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/OfferService.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Coordinator/OffersPresentableFactoryImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/RouterImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/UIWindowSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/UINavigationControllerSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Navigation/UIViewControllerSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppChildCoordinatorFactoryImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppPresentableFactoryImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/AppCoordinatorImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOffersView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OffersController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/OfferServiceImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOffersViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Launch/Coordinator/Mocks/MockOffersCoordinator.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOfferService.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OffersViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOfferDetailViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="appcode.project-settings://29ffc937">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OffersViewModelImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Mocks/MockOfferDetailView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OffersControllerSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Coordinator/OffersCoordinatorImplementationSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersTests/Offers/Screens/OfferDetailControllerSpec.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Screens/OfferDetailController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OffersUITests/OffersUITests.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Offers/Offers/Cells/OffersCell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="85" column="125" selection-start-line="85" selection-start-column="125" selection-end-line="85" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
