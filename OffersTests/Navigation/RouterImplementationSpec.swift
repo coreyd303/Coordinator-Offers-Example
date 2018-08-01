@@ -22,6 +22,10 @@ class RouterImplementationSpec: QuickSpec {
         expect(sut).to(beAKindOf(Router.self))
       }
 
+      it("should conform to Presentable") {
+        expect(sut).to(beAKindOf(Presentable.self))
+      }
+
       describe("init") {
         it("should set matching rootController") {
           expect(sut.rootController).to(be(stubNavigationController))

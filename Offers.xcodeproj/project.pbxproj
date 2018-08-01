@@ -71,6 +71,7 @@
 		4A3CD37C207A72D9000AC3ED /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36D207A7198000AC3ED /* Quick.framework */; };
 		4A52E9FA207715B4001ABB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A52E9F9207715B4001ABB04 /* Assets.xcassets */; };
 		4A52EA13207715B4001ABB04 /* OffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A52EA12207715B4001ABB04 /* OffersUITests.swift */; };
+		DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C46A812B38370FE19D966 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		4A52EA0E207715B4001ABB04 /* OffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52EA12207715B4001ABB04 /* OffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUITests.swift; sourceTree = "<group>"; };
 		4A52EA14207715B4001ABB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2C46A812B38370FE19D966 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 				347D1EFB79CC9052473F4592 /* Router.swift */,
 				347D178168417B6DAF05C1FF /* Presentable.swift */,
 				347D1922B9ACE9114E25ACBE /* WindowProviding.swift */,
+				DC2C46A812B38370FE19D966 /* Presenter.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				347D107E7AD395EA37ACAB9A /* OfferDetailHeaderView.swift in Sources */,
 				347D186A66B50E9628EA400B /* Images.swift in Sources */,
 				347D11169C2FE78DEFA96E77 /* Fonts.swift in Sources */,
+				DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

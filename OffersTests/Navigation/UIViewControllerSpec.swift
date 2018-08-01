@@ -18,6 +18,10 @@ class UIViewControllerSpec: QuickSpec {
       it("should conform to Presentable") {
         expect(sut).to(beAKindOf(Presentable.self))
       }
+
+      it("should conform to Presenter") {
+        expect(sut).to(beAKindOf(Presenter.self))
+      }
     }
   }
 }

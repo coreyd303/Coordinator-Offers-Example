@@ -11,6 +11,14 @@ protocol Router: Presentable {
 }
 
 class RouterImplementation: Router {
+  func present(_ presentable: Presentable, animated: Bool, completion: (() -> Void)?) {
+    rootController.present(presentable, animated: animated, completion: completion)
+  }
+
+  func dismiss(animated: Bool, completion: (() -> Void)?) {
+    rootController.dismiss(animated: animated, completion: completion)
+  }
+
   let rootController: UINavigationController
 
   init(rootController: UINavigationController) {
