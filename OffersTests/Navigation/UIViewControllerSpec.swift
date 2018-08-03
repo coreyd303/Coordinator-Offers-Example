@@ -25,6 +25,12 @@ class UIViewControllerSpec: QuickSpec {
         expect(sut).to(beAKindOf(Presenter.self))
       }
 
+      describe("toPresent") {
+        it("should return self") {
+          expect(sut.toPresent()).to(be(sut))
+        }
+      }
+
       describe("present") {
         beforeEach {
           UIViewController.swizzleMethods()
