@@ -71,6 +71,8 @@
 		4A3CD37C207A72D9000AC3ED /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36D207A7198000AC3ED /* Quick.framework */; };
 		4A52E9FA207715B4001ABB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A52E9F9207715B4001ABB04 /* Assets.xcassets */; };
 		4A52EA13207715B4001ABB04 /* OffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A52EA12207715B4001ABB04 /* OffersUITests.swift */; };
+		DC2C408695C959C73C825925 /* MockPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C424E9B3E36332F495282 /* MockPresentable.swift */; };
+		DC2C44D27CE8CB7A68D60CF6 /* UIViewControllerSwizzles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */; };
 		DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C46A812B38370FE19D966 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -184,7 +186,9 @@
 		4A52EA0E207715B4001ABB04 /* OffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52EA12207715B4001ABB04 /* OffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUITests.swift; sourceTree = "<group>"; };
 		4A52EA14207715B4001ABB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2C424E9B3E36332F495282 /* MockPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentable.swift; sourceTree = "<group>"; };
 		DC2C46A812B38370FE19D966 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerSwizzles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 				347D18125EAEBF2EDAA13C2D /* RouterImplementationSpec.swift */,
 				347D166D8073E4AF3934EF0A /* UIWindowSpec.swift */,
 				347D16F0BE79E8E7F94F3AB8 /* UIViewControllerSpec.swift */,
+				DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				347D1E79B2C3E1B4CC8B9743 /* MockRouter.swift */,
+				DC2C424E9B3E36332F495282 /* MockPresentable.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -683,6 +689,8 @@
 				347D19ACE0EE20E53C9B168E /* MockOfferDetailViewModel.swift in Sources */,
 				347D14944933BE39531DDC9C /* MockOfferDetailView.swift in Sources */,
 				347D18934C9EFB56AD839236 /* MockOfferService.swift in Sources */,
+				DC2C44D27CE8CB7A68D60CF6 /* UIViewControllerSwizzles.swift in Sources */,
+				DC2C408695C959C73C825925 /* MockPresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

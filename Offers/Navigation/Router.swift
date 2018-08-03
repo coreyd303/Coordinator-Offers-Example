@@ -11,14 +11,6 @@ protocol Router: Presentable {
 }
 
 class RouterImplementation: Router {
-  func present(_ presentable: Presentable, animated: Bool, completion: (() -> Void)?) {
-    rootController.present(presentable, animated: animated, completion: completion)
-  }
-
-  func dismiss(animated: Bool, completion: (() -> Void)?) {
-    rootController.dismiss(animated: animated, completion: completion)
-  }
-
   let rootController: UINavigationController
 
   init(rootController: UINavigationController) {
@@ -29,11 +21,19 @@ class RouterImplementation: Router {
     rootController.setViewControllers([presentable.toPresent()], animated: false)
   }
 
-  func push(_ presentable: Presentable) {
-    rootController.pushViewController(presentable.toPresent(), animated: true)
-  }
-
   func toPresent() -> UIViewController {
     return rootController
+  }
+
+  func present(_ presentable: Presentable, animated: Bool, completion: (() -> Void)?) {
+    rootController.present(presentable, animated: animated, completion: completion)
+  }
+
+  func dismiss(animated: Bool, completion: (() -> Void)?) {
+    rootController.dismiss(animated: animated, completion: completion)
+  }
+
+  func push(_ presentable: Presentable) {
+    rootController.pushViewController(presentable.toPresent(), animated: true)
   }
 }
