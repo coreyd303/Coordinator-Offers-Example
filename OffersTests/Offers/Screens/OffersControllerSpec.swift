@@ -81,8 +81,8 @@ class OffersControllerSpec: QuickSpec {
       }
     }
 
-    func createFavorableOffer(id: Int = 0) -> FavorableOffer {
-      let stubOffer = Offer(id: id, url: nil, name: "", description: "", terms: "", currentValue: "")
+    func createFavorableOffer(id: String = "0") -> FavorableOffer {
+      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
       let stubFavorableOffer = FavorableOffer(offer: stubOffer, favored: false)
       return stubFavorableOffer
     }

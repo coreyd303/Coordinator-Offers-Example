@@ -94,7 +94,7 @@ class OffersCoordinatorImplementationSpec: QuickSpec {
 
                 context("with different offer") {
                   it("offersPresentable should update with matching favorableOffer") {
-                    let stubFavorableOffer = createFavorableOffer(id: 99)
+                    let stubFavorableOffer = createFavorableOffer(id: "99")
 
                     mockOfferDetailPresentable.invokedOutput?(.updateOffer(stubFavorableOffer))
 
@@ -108,8 +108,8 @@ class OffersCoordinatorImplementationSpec: QuickSpec {
       }
     }
 
-    func createFavorableOffer(id: Int = 0) -> FavorableOffer {
-      let stubOffer = Offer(id: id, url: nil, name: "", description: "", terms: "", currentValue: "")
+    func createFavorableOffer(id: String = "0") -> FavorableOffer {
+      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
       let stubFavorableOffer = FavorableOffer(offer: stubOffer, favored: false)
       return stubFavorableOffer
     }

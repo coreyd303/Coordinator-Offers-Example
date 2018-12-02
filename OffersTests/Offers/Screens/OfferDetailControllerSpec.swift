@@ -97,8 +97,8 @@ class OfferDetailControllerSpec: QuickSpec {
       }
     }
 
-    func createOffer(id: Int = 0) -> Offer {
-      return Offer(id: id, url: nil, name: "", description: "", terms: "", currentValue: "")
+    func createOffer(id: String = "0") -> Offer {
+      return Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
     }
   }
 }

@@ -38,11 +38,11 @@ class OffersViewModelImplementationSpec: QuickSpec {
       describe("update") {
         context("with existing offer id") {
           it("offers should replace matching index with updated offer") {
-            let stubOffer = createOffer(id: 99)
+            let stubOffer = createOffer(id: "99")
             mockOfferService.stubbedGetOffersCompletionResult = ([stubOffer], ())
             sut.getOffers()
 
-            let newStubOffer = createOffer(id: 99, name: "test")
+            let newStubOffer = createOffer(id: "99", name: "test")
             let stubFavorableOffer = FavorableOffer(offer: newStubOffer, favored: false)
             sut.update(favorableOffer: stubFavorableOffer)
 
@@ -52,12 +52,12 @@ class OffersViewModelImplementationSpec: QuickSpec {
 
         context("with non-matching id offer") {
           it("offers should not change") {
-            let oldStubOffer = createOffer(id: 99)
+            let oldStubOffer = createOffer(id: "99")
             let oldStubFavorableOffer = FavorableOffer(offer: oldStubOffer, favored: false)
             mockOfferService.stubbedGetOffersCompletionResult = ([oldStubOffer], ())
             sut.getOffers()
 
-            let updatedStubOffer = createOffer(id: 22, name: "test")
+            let updatedStubOffer = createOffer(id: "22", name: "test")
             let updatedStubFavorableOffer = FavorableOffer(offer: updatedStubOffer, favored: false)
             sut.update(favorableOffer: updatedStubFavorableOffer)
 
@@ -66,7 +66,7 @@ class OffersViewModelImplementationSpec: QuickSpec {
         }
 
         it("should output matching updated offersViewData") {
-          let stubOffer = createOffer(id: 99)
+          let stubOffer = createOffer(id: "99")
           mockOfferService.stubbedGetOffersCompletionResult = ([stubOffer], ())
           sut.getOffers()
           var invokedOffersViewData: OffersViewData?
@@ -74,7 +74,7 @@ class OffersViewModelImplementationSpec: QuickSpec {
             invokedOffersViewData = viewData
           }
 
-          let newStubOffer = createOffer(id: 99, name: "test")
+          let newStubOffer = createOffer(id: "99", name: "test")
           let stubFavorableOffer = FavorableOffer(offer: newStubOffer, favored: false)
           sut.update(favorableOffer: stubFavorableOffer)
 
@@ -83,8 +83,8 @@ class OffersViewModelImplementationSpec: QuickSpec {
       }
     }
 
-    func createOffer(id: Int = 0, name: String = "") -> Offer {
-      let stubOffer = Offer(id: id, url: nil, name: name, description: "", terms: "", currentValue: "")
+    func createOffer(id: String = "0", name: String = "") -> Offer {
+      let stubOffer = Offer(id: id, urlString: nil, name: name, description: "", terms: "", currentValue: "")
       return stubOffer
     }
   }

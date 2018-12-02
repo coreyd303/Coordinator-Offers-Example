@@ -62,16 +62,15 @@
 		347D1FBA90B176B0D6B99177 /* MockOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1BB96A822815FA0592E0 /* MockOffersView.swift */; };
 		347D1FE7EB56BF9F5305C06E /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1E79B2C3E1B4CC8B9743 /* MockRouter.swift */; };
 		4A3CD36920785E88000AC3ED /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36720785E88000AC3ED /* SDWebImage.framework */; };
-		4A3CD36A20785E88000AC3ED /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36820785E88000AC3ED /* SwiftyJSON.framework */; };
 		4A3CD376207A721A000AC3ED /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A3CD36C207A7198000AC3ED /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A3CD377207A721A000AC3ED /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A3CD36D207A7198000AC3ED /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A3CD379207A724C000AC3ED /* SDWebImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A3CD36720785E88000AC3ED /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A3CD37A207A724C000AC3ED /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A3CD36820785E88000AC3ED /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A3CD37B207A72D9000AC3ED /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36C207A7198000AC3ED /* Nimble.framework */; };
 		4A3CD37C207A72D9000AC3ED /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CD36D207A7198000AC3ED /* Quick.framework */; };
 		4A52E9FA207715B4001ABB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A52E9F9207715B4001ABB04 /* Assets.xcassets */; };
 		4A52EA13207715B4001ABB04 /* OffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A52EA12207715B4001ABB04 /* OffersUITests.swift */; };
 		DC2C408695C959C73C825925 /* MockPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C424E9B3E36332F495282 /* MockPresentable.swift */; };
+		DC2C4348EAC5CD90FA011F98 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4DA13F821EF1F04BAD12 /* String.swift */; };
 		DC2C44D27CE8CB7A68D60CF6 /* UIViewControllerSwizzles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */; };
 		DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C46A812B38370FE19D966 /* Presenter.swift */; };
 /* End PBXBuildFile section */
@@ -112,7 +111,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4A3CD379207A724C000AC3ED /* SDWebImage.framework in CopyFiles */,
-				4A3CD37A207A724C000AC3ED /* SwiftyJSON.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +173,6 @@
 		347D1FA0F49321A28B183828 /* OfferDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailController.swift; sourceTree = "<group>"; };
 		347D1FEDFA0A56F33351C548 /* UINavigationControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpec.swift; sourceTree = "<group>"; };
 		4A3CD36720785E88000AC3ED /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
-		4A3CD36820785E88000AC3ED /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		4A3CD36C207A7198000AC3ED /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4A3CD36D207A7198000AC3ED /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4A52E9EF207715B2001ABB04 /* Offers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +186,7 @@
 		DC2C424E9B3E36332F495282 /* MockPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentable.swift; sourceTree = "<group>"; };
 		DC2C46A812B38370FE19D966 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerSwizzles.swift; sourceTree = "<group>"; };
+		DC2C4DA13F821EF1F04BAD12 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +195,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3CD36920785E88000AC3ED /* SDWebImage.framework in Frameworks */,
-				4A3CD36A20785E88000AC3ED /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +237,7 @@
 				347D1BF4B73F1C79F85D936C /* Color.swift */,
 				347D1DE30FBBC5A55D2110F6 /* Images.swift */,
 				347D135FA359332D140EAF57 /* Fonts.swift */,
+				DC2C4DA13F821EF1F04BAD12 /* String.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -434,7 +432,6 @@
 				4A3CD36C207A7198000AC3ED /* Nimble.framework */,
 				4A3CD36D207A7198000AC3ED /* Quick.framework */,
 				4A3CD36720785E88000AC3ED /* SDWebImage.framework */,
-				4A3CD36820785E88000AC3ED /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -657,6 +654,7 @@
 				347D186A66B50E9628EA400B /* Images.swift in Sources */,
 				347D11169C2FE78DEFA96E77 /* Fonts.swift in Sources */,
 				DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */,
+				DC2C4348EAC5CD90FA011F98 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

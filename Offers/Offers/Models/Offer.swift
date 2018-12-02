@@ -3,24 +3,25 @@
 // Copyright (c) 2018 Tablesand LLC. All rights reserved.
 //
 
-import SwiftyJSON
+import Foundation
 
-struct Offer: Equatable {
-  let id: Int
-  let url: URL?
+struct Offer: Decodable, Equatable {
+  let id: String
+  let urlString: String?
   let name: String
   let description: String
   let terms: String
   let currentValue: String
-}
+  var url: URL? {
+    return urlString?.asURL()
+  }
 
-extension Offer {
-  init(json: JSON) throws {
-    id = json["id"].intValue
-    url = URL(string: json["url"].stringValue)
-    name = json["name"].stringValue
-    description = json["description"].stringValue
-    terms = json["terms"].stringValue
-    currentValue = json["current_value"].stringValue
+  enum CodingKeys: String, CodingKey {
+    case id
+    case urlString = "url"
+    case name
+    case description
+    case terms
+    case currentValue = "current_value"
   }
 }

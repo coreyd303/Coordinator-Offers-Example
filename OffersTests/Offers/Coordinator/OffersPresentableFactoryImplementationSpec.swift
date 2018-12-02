@@ -60,7 +60,7 @@ class OffersPresentableFactoryImplementationSpec: QuickSpec {
 
         context("with a different favorable offer") {
           it("viewModel favorableOffer should match") {
-            let stubFavorableOffer: FavorableOffer = createFavorableOffer(id: 99)
+            let stubFavorableOffer: FavorableOffer = createFavorableOffer(id: "99")
             let controller = sut.makeOfferDetailPresentable(favorableOffer: stubFavorableOffer) as! OfferDetailController
             let viewModel = controller.viewModel as! OfferDetailViewModelImplementation
             expect(viewModel.favorableOffer).to(equal(stubFavorableOffer))
@@ -69,8 +69,8 @@ class OffersPresentableFactoryImplementationSpec: QuickSpec {
       }
     }
 
-    func createFavorableOffer(id: Int = 0) -> FavorableOffer {
-      let stubOffer = Offer(id: id, url: nil, name: "", description: "", terms: "", currentValue: "")
+    func createFavorableOffer(id: String = "0") -> FavorableOffer {
+      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
       let stubFavorableOffer = FavorableOffer(offer: stubOffer, favored: false)
       return stubFavorableOffer
     }

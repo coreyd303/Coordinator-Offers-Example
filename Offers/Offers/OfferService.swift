@@ -3,7 +3,7 @@
 // Copyright (c) 2018 Tablesand LLC. All rights reserved.
 //
 
-import SwiftyJSON
+import Foundation
 
 protocol OfferService {
   func getOffers(completion: (([Offer]) -> Void))
@@ -11,20 +11,12 @@ protocol OfferService {
 
 class OfferServiceImplementation: OfferService {
   func getOffers(completion: (([Offer]) -> Void)) {
-    var offers = [Offer]()
+    var offers: [Offer] = []
 
     if let path = Bundle.main.path(forResource: "Offers", ofType: "json") {
       do {
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-        let jsonArray = try JSON(data: data).arrayValue
-
-        for json in jsonArray {
-          do {
-            offers.append(try Offer(json: json))
-          } catch let jsonError {
-            print(jsonError.localizedDescription)
-          }
-        }
+        offers = try JSONDecoder().decode([Offer].self, from: data)
       } catch let error {
         print(error.localizedDescription)
       }
