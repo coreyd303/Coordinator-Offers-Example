@@ -32,7 +32,6 @@
 		347D157AE8CBB8F4682DBD15 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1DD40F7477E4DC5C8EF7 /* UIColor.swift */; };
 		347D15F4F45BF518FB68DE8D /* OffersViewModelImplementationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1146006FE49E1BC51467 /* OffersViewModelImplementationSpec.swift */; };
 		347D16186A7E084C2E582494 /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D19A21DCCFFF1A9A4ACC1 /* JSONError.swift */; };
-		347D1644B58EED889228F920 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 347D196CA1DE42EB2D0CF506 /* Offers.json */; };
 		347D177A4EE077872E0E15D4 /* AppChildCoordinatorFactoryImplementationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D112A299135480A20B42A /* AppChildCoordinatorFactoryImplementationSpec.swift */; };
 		347D17A08FC9B3E642F732C0 /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1629D47670FFBE66C0CC /* OffersCell.swift */; };
 		347D186A66B50E9628EA400B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1DE30FBBC5A55D2110F6 /* Images.swift */; };
@@ -42,7 +41,6 @@
 		347D1940E235D668F383AA67 /* OffersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D16F4AA9018E3E4A00E6F /* OffersController.swift */; };
 		347D195DDBA4902AAE621E58 /* OffersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D12EFFCAD42B03D81B701 /* OffersCoordinator.swift */; };
 		347D19631EF1B01426224769 /* OfferDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1FA0F49321A28B183828 /* OfferDetailController.swift */; };
-		347D198F08FA036B0D4D40F0 /* FavorableOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D17AD9E2624BFEEA563C9 /* FavorableOffer.swift */; };
 		347D19ACE0EE20E53C9B168E /* MockOfferDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1BA6E5C2800C0A8FA619 /* MockOfferDetailViewModel.swift */; };
 		347D19B58456DC2F4F43DD51 /* MockAppChildCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D184650142C158DFF9DE8 /* MockAppChildCoordinatorFactory.swift */; };
 		347D1B22CF277ED2408FD591 /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D1923E08A9AE4979B60EF /* OffersView.swift */; };
@@ -72,7 +70,12 @@
 		DC2C408695C959C73C825925 /* MockPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C424E9B3E36332F495282 /* MockPresentable.swift */; };
 		DC2C4348EAC5CD90FA011F98 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4DA13F821EF1F04BAD12 /* String.swift */; };
 		DC2C44D27CE8CB7A68D60CF6 /* UIViewControllerSwizzles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */; };
+		DC2C474E0BC8CB66A7D67B8F /* OffersDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C49CC835437A8C85D4B91 /* OffersDataStore.swift */; };
+		DC2C47A17C137666CB505243 /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C476A622EFE45202D9B71 /* DeepLinkOption.swift */; };
+		DC2C48A3F0848D265897C6E0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C43785BF7A03AE65E027E /* BaseCoordinator.swift */; };
 		DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C46A812B38370FE19D966 /* Presenter.swift */; };
+		DC2C4AE96DFA54678D3DD749 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = DC2C441098579197551E9D8D /* Offers.json */; };
+		DC2C4E38BF787666C7A07831 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C4113C9205594C34A4A56 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +142,6 @@
 		347D16F4AA9018E3E4A00E6F /* OffersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersController.swift; sourceTree = "<group>"; };
 		347D178168417B6DAF05C1FF /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		347D179DBC44DA62C4B0BBCE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		347D17AD9E2624BFEEA563C9 /* FavorableOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorableOffer.swift; sourceTree = "<group>"; };
 		347D17F33BEB985FA85F2EC6 /* OfferServiceImplementationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferServiceImplementationSpec.swift; sourceTree = "<group>"; };
 		347D18125EAEBF2EDAA13C2D /* RouterImplementationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImplementationSpec.swift; sourceTree = "<group>"; };
 		347D184650142C158DFF9DE8 /* MockAppChildCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppChildCoordinatorFactory.swift; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 		347D1922B9ACE9114E25ACBE /* WindowProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowProviding.swift; sourceTree = "<group>"; };
 		347D1923E08A9AE4979B60EF /* OffersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 		347D1969503E4B9C7A9FB739 /* OfferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferService.swift; sourceTree = "<group>"; };
-		347D196CA1DE42EB2D0CF506 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
 		347D19A21DCCFFF1A9A4ACC1 /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
 		347D19F0558C28D90B572BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347D1A16AF2E6ECE3472521A /* MockOffersPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockOffersPresentable.swift; sourceTree = "<group>"; };
@@ -183,8 +184,13 @@
 		4A52EA0E207715B4001ABB04 /* OffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A52EA12207715B4001ABB04 /* OffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersUITests.swift; sourceTree = "<group>"; };
 		4A52EA14207715B4001ABB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2C4113C9205594C34A4A56 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		DC2C424E9B3E36332F495282 /* MockPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentable.swift; sourceTree = "<group>"; };
+		DC2C43785BF7A03AE65E027E /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		DC2C441098579197551E9D8D /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
 		DC2C46A812B38370FE19D966 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DC2C476A622EFE45202D9B71 /* DeepLinkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		DC2C49CC835437A8C85D4B91 /* OffersDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersDataStore.swift; sourceTree = "<group>"; };
 		DC2C4CA254D4CFE2D50923ED /* UIViewControllerSwizzles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerSwizzles.swift; sourceTree = "<group>"; };
 		DC2C4DA13F821EF1F04BAD12 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				347D1F40A73D10AD3A7E0C94 /* Offer.swift */,
-				347D17AD9E2624BFEEA563C9 /* FavorableOffer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				347D1CACC1AC24EF74F47777 /* Coordinator.swift */,
+				DC2C476A622EFE45202D9B71 /* DeepLinkOption.swift */,
+				DC2C43785BF7A03AE65E027E /* BaseCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -468,7 +475,7 @@
 				347D11DCEEC045D2063F92DC /* Helpers */,
 				4A52E9F9207715B4001ABB04 /* Assets.xcassets */,
 				4A52E9FE207715B4001ABB04 /* Info.plist */,
-				347D196CA1DE42EB2D0CF506 /* Offers.json */,
+				DC2C4BC3ACE96D492F8D2DE7 /* Data */,
 			);
 			path = Offers;
 			sourceTree = "<group>";
@@ -491,6 +498,16 @@
 				4A52EA14207715B4001ABB04 /* Info.plist */,
 			);
 			path = OffersUITests;
+			sourceTree = "<group>";
+		};
+		DC2C4BC3ACE96D492F8D2DE7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C4113C9205594C34A4A56 /* DataStore.swift */,
+				DC2C441098579197551E9D8D /* Offers.json */,
+				DC2C49CC835437A8C85D4B91 /* OffersDataStore.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,13 +580,16 @@
 				TargetAttributes = {
 					4A52E9EE207715B2001ABB04 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 					4A52EA02207715B4001ABB04 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 4A52E9EE207715B2001ABB04;
 					};
 					4A52EA0D207715B4001ABB04 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 4A52E9EE207715B2001ABB04;
 					};
 				};
@@ -601,7 +621,7 @@
 			files = (
 				4A52E9FA207715B4001ABB04 /* Assets.xcassets in Resources */,
 				347D1EE290248839F6DBCA15 /* LaunchScreen.storyboard in Resources */,
-				347D1644B58EED889228F920 /* Offers.json in Resources */,
+				DC2C4AE96DFA54678D3DD749 /* Offers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,12 +669,15 @@
 				347D14BC0006FAF6B5A313E8 /* OfferDetailViewModel.swift in Sources */,
 				347D1F879B76E35CD31367AC /* OfferDetailView.swift in Sources */,
 				347D1F3A61EE540315213D4C /* OfferDetailCell.swift in Sources */,
-				347D198F08FA036B0D4D40F0 /* FavorableOffer.swift in Sources */,
 				347D107E7AD395EA37ACAB9A /* OfferDetailHeaderView.swift in Sources */,
 				347D186A66B50E9628EA400B /* Images.swift in Sources */,
 				347D11169C2FE78DEFA96E77 /* Fonts.swift in Sources */,
 				DC2C496F5FF9E0612FF9201C /* Presenter.swift in Sources */,
 				DC2C4348EAC5CD90FA011F98 /* String.swift in Sources */,
+				DC2C47A17C137666CB505243 /* DeepLinkOption.swift in Sources */,
+				DC2C48A3F0848D265897C6E0 /* BaseCoordinator.swift in Sources */,
+				DC2C4E38BF787666C7A07831 /* DataStore.swift in Sources */,
+				DC2C474E0BC8CB66A7D67B8F /* OffersDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,13 +864,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Offers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.Offers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -863,13 +887,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Offers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.Offers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -886,6 +911,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = OffersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -893,7 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.OffersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Offers.app/Offers";
 			};
@@ -911,6 +937,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = OffersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -918,7 +945,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.OffersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Offers.app/Offers";
 			};
@@ -931,6 +958,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36W579H8ZE;
 				INFOPLIST_FILE = OffersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -938,7 +966,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.OffersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Offers;
 			};
@@ -951,6 +979,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36W579H8ZE;
 				INFOPLIST_FILE = OffersUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -958,7 +987,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tablesand.OffersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Offers;
 			};

@@ -6,22 +6,35 @@
 import Foundation
 
 protocol OfferService {
-  func getOffers(completion: (([Offer]) -> Void))
+  func getOffers() -> [Offer]
+  func getOffer(forID offerID: String) -> Offer?
+  func updateOffer(_ offer: Offer)
 }
 
 class OfferServiceImplementation: OfferService {
-  func getOffers(completion: (([Offer]) -> Void)) {
-    var offers: [Offer] = []
+  let dataStore: DataStore
 
-    if let path = Bundle.main.path(forResource: "Offers", ofType: "json") {
-      do {
-        let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-        offers = try JSONDecoder().decode([Offer].self, from: data)
-      } catch let error {
-        print(error.localizedDescription)
+  init(dataStore: DataStore) {
+    self.dataStore = dataStore
+  }
+
+  func getOffers() -> [Offer] {
+    return dataStore.elements()
+  }
+
+  func getOffer(forID offerID: String) -> Offer? {
+    return (getOffers().filter { $0.id == offerID }).first
+  }
+
+  func updateOffer(_ offer: Offer) {
+    var offers = getOffers()
+    
+    for (index, offerOnDisk) in offers.enumerated() {
+      if offerOnDisk.id == offer.id {
+        offers[index] = offer
+        dataStore.saveElements(offers)
+        break
       }
     }
-
-    return completion(offers)
   }
 }

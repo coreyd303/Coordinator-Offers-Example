@@ -6,8 +6,8 @@
 import Foundation
 
 protocol OfferDetailViewModel: class {
-  var favorableOffer: FavorableOffer { get set }
   var output: ((OfferDetailViewData) -> Void)? { get set }
+  func toggleFavored()
 }
 
 struct OfferDetailViewData: Equatable {
@@ -27,23 +27,34 @@ class OfferDetailViewModelImplementation: OfferDetailViewModel {
       outputViewData()
     }
   }
-  var favorableOffer: FavorableOffer {
-    didSet {
+  let offerID: String
+  let offerService: OfferService
+
+  init(offerID: String, offerService: OfferService) {
+    self.offerID = offerID
+    self.offerService = offerService
+  }
+
+  func toggleFavored() {
+    if let offer = offerService.getOffer(forID: offerID) {
+      let updatedOffer = Offer(id: offer.id, urlString: offer.urlString, name: offer.name, description: offer.description, terms: offer.terms, currentValue: offer.currentValue, favored: !offer.favored)
+      offerService.updateOffer(updatedOffer)
       outputViewData()
     }
   }
 
-  init(favorableOffer: FavorableOffer) {
-    self.favorableOffer = favorableOffer
-  }
+  // MARK: - Private
 
   private func outputViewData() {
+    guard let offer = offerService.getOffer(forID: offerID) else {
+      return
+    }
     let viewData = OfferDetailViewData(data: [
-      OfferDetailViewData.Data(title: "Name", detail: String(favorableOffer.offer.name)),
-      OfferDetailViewData.Data(title: "Description", detail: String(favorableOffer.offer.description)),
-      OfferDetailViewData.Data(title: "Terms", detail: String(favorableOffer.offer.terms)),
-      OfferDetailViewData.Data(title: "Current Value", detail: String(favorableOffer.offer.currentValue))
-    ], url: favorableOffer.offer.url, favorite: favorableOffer.favored)
+      OfferDetailViewData.Data(title: "Name", detail: String(offer.name)),
+      OfferDetailViewData.Data(title: "Description", detail: String(offer.description)),
+      OfferDetailViewData.Data(title: "Terms", detail: String(offer.terms)),
+      OfferDetailViewData.Data(title: "Current Value", detail: String(offer.currentValue))
+    ], url: offer.url, favorite: offer.favored)
     output?(viewData)
   }
 }

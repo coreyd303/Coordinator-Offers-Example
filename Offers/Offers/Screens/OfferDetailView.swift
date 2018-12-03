@@ -48,7 +48,7 @@ class OfferDetailViewImplementation: UIView, OfferDetailView {
     tableView.register(OfferDetailCell.self, forCellReuseIdentifier: String(describing: OfferDetailCell.self))
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 50
     tableView.allowsSelection = false
     addSubview(tableView)

@@ -5,13 +5,14 @@
 
 import Foundation
 
-struct Offer: Decodable, Equatable {
+struct Offer: Codable, Equatable {
   let id: String
   let urlString: String?
   let name: String
   let description: String
   let terms: String
   let currentValue: String
+  let favored: Bool
   var url: URL? {
     return urlString?.asURL()
   }
@@ -23,5 +24,6 @@ struct Offer: Decodable, Equatable {
     case description
     case terms
     case currentValue = "current_value"
+    case favored
   }
 }

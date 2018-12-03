@@ -20,71 +20,47 @@ class OffersViewModelImplementationSpec: QuickSpec {
       describe("getOffers") {
         it("offerService should getOffers") {
           sut.getOffers()
+
           expect(mockOfferService.invokedGetOffersCount).to(equal(1))
         }
 
-        context("when offerService returns offers") {
-          it("offers should match") {
-            let stubOffer = createOffer()
-            mockOfferService.stubbedGetOffersCompletionResult = ([stubOffer], ())
-
-            sut.getOffers()
-
-            expect(sut.offers).to(equal([FavorableOffer(offer: stubOffer, favored: false)]))
-          }
-        }
-      }
-
-      describe("update") {
-        context("with existing offer id") {
-          it("offers should replace matching index with updated offer") {
-            let stubOffer = createOffer(id: "99")
-            mockOfferService.stubbedGetOffersCompletionResult = ([stubOffer], ())
-            sut.getOffers()
-
-            let newStubOffer = createOffer(id: "99", name: "test")
-            let stubFavorableOffer = FavorableOffer(offer: newStubOffer, favored: false)
-            sut.update(favorableOffer: stubFavorableOffer)
-
-            expect(sut.offers.first).to(equal(stubFavorableOffer))
-          }
-        }
-
-        context("with non-matching id offer") {
-          it("offers should not change") {
-            let oldStubOffer = createOffer(id: "99")
-            let oldStubFavorableOffer = FavorableOffer(offer: oldStubOffer, favored: false)
-            mockOfferService.stubbedGetOffersCompletionResult = ([oldStubOffer], ())
-            sut.getOffers()
-
-            let updatedStubOffer = createOffer(id: "22", name: "test")
-            let updatedStubFavorableOffer = FavorableOffer(offer: updatedStubOffer, favored: false)
-            sut.update(favorableOffer: updatedStubFavorableOffer)
-
-            expect(sut.offers.first).to(equal(oldStubFavorableOffer))
-          }
-        }
-
-        it("should output matching updated offersViewData") {
-          let stubOffer = createOffer(id: "99")
-          mockOfferService.stubbedGetOffersCompletionResult = ([stubOffer], ())
-          sut.getOffers()
+        it("should output with matching offers from service") {
+          let stubOffer = createOffer()
+          mockOfferService.stubbedGetOffersResult = [stubOffer]
           var invokedOffersViewData: OffersViewData?
           sut.output = { viewData in
             invokedOffersViewData = viewData
           }
 
-          let newStubOffer = createOffer(id: "99", name: "test")
-          let stubFavorableOffer = FavorableOffer(offer: newStubOffer, favored: false)
-          sut.update(favorableOffer: stubFavorableOffer)
+          sut.getOffers()
 
-          expect(invokedOffersViewData).to(equal(OffersViewData(favorableOffers: [stubFavorableOffer])))
+          expect(invokedOffersViewData).to(equal(OffersViewData(offers: [stubOffer])))
+        }
+      }
+
+      describe("offerID") {
+        beforeEach {
+          let stubOffer = createOffer(id: "3")
+          mockOfferService.stubbedGetOffersResult = [stubOffer]
+        }
+
+        it("offerService should getOffers") {
+          _ = sut.offerID(atIndex: 0)
+
+          expect(mockOfferService.invokedGetOffersCount).to(equal(1))
+        }
+
+        it("should return offer id of offerService getOffers at matching index") {
+
+          let id = sut.offerID(atIndex: 0)
+
+          expect(id).to(equal("3"))
         }
       }
     }
 
     func createOffer(id: String = "0", name: String = "") -> Offer {
-      let stubOffer = Offer(id: id, urlString: nil, name: name, description: "", terms: "", currentValue: "")
+      let stubOffer = Offer(id: id, urlString: nil, name: name, description: "", terms: "", currentValue: "", favored: false)
       return stubOffer
     }
   }

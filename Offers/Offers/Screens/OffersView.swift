@@ -24,7 +24,7 @@ class OffersViewImplementation: UIView, OffersView, UICollectionViewDelegateFlow
   }
 
   init() {
-    viewData = OffersViewData(favorableOffers: [])
+    viewData = OffersViewData(offers: [])
     super.init(frame: CGRect.zero)
 
     configureView()
@@ -45,12 +45,12 @@ class OffersViewImplementation: UIView, OffersView, UICollectionViewDelegateFlow
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewData.favorableOffers.count
+    return viewData.offers.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: OffersCell.self), for: indexPath) as! OffersCell
-    cell.configure(for: viewData.favorableOffers[indexPath.row])
+    cell.configure(for: viewData.offers[indexPath.row])
     return cell
   }
 

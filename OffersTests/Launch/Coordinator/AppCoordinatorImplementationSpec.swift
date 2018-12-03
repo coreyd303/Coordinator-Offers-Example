@@ -57,8 +57,8 @@ class AppCoordinatorImplementationSpec: QuickSpec {
           expect(mockAppChildCoordinatorFactory.invokedMakeOffersCoordinatorParameters?.router).to(be(mockAppPresentableFactory.stubbedMakeRouterResult))
         }
 
-        it("should set offersCoordinator with offersCoordinator from coordinatorFactory") {
-          expect(sut.offersCoordinator).to(be(mockAppChildCoordinatorFactory.stubbedMakeOffersCoordinatorResult))
+        it("should add dependency with offersCoordinator from coordinatorFactory") {
+          expect(sut.childCoordinators.contains(where: { $0 === mockAppChildCoordinatorFactory.stubbedMakeOffersCoordinatorResult })).to(beTrue())
         }
 
         it("offersCoordinator should start") {

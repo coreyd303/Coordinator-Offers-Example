@@ -7,18 +7,18 @@ import UIKit
 
 protocol OffersPresentableFactory {
   func makeOffersPresentable() -> OffersPresentable
-  func makeOfferDetailPresentable(favorableOffer: FavorableOffer) -> OfferDetailPresentable
+  func makeOfferDetailsPresentable(offerID: String) -> OfferDetailPresentable
 }
 
 class OffersPresentableFactoryImplementation: OffersPresentableFactory {    
   func makeOffersPresentable() -> OffersPresentable {
-    let offerService = OfferServiceImplementation()
+    let offerService = OfferServiceImplementation(dataStore: OfferDataStore())
     let offersViewModel = OffersViewModelImplementation(offerService: offerService)
     return OffersController(viewModel: offersViewModel)
   }
 
-  func makeOfferDetailPresentable(favorableOffer: FavorableOffer) -> OfferDetailPresentable {
-    let offerDetailViewModel = OfferDetailViewModelImplementation(favorableOffer: favorableOffer)
+  func makeOfferDetailsPresentable(offerID: String) -> OfferDetailPresentable {
+    let offerDetailViewModel = OfferDetailViewModelImplementation(offerID: offerID, offerService: OfferServiceImplementation(dataStore: OfferDataStore()))
     return OfferDetailController(viewModel: offerDetailViewModel)
   }
 }

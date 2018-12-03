@@ -6,12 +6,11 @@
 import UIKit
 
 protocol OffersPresentable: Presentable {
-  func update(favorableOffer: FavorableOffer)
   var output: ((OffersPresentableOutput) -> ())? { get set }
 }
 
 enum OffersPresentableOutput: Equatable {
-  case offer(FavorableOffer)
+  case offer(offerID: String)
 }
 
 class OffersController: UIViewController, OffersPresentable {
@@ -42,21 +41,24 @@ class OffersController: UIViewController, OffersPresentable {
     primaryView.output = { [output, viewModel] offersViewOutput in
       switch offersViewOutput {
       case .offerTapped(let index):
-        output?(.offer(viewModel.offers[index]))
+        output?(.offer(offerID: viewModel.offerID(atIndex: index)))
       }
     }
+
+    viewModel.output = { [primaryView] viewData in
+      primaryView.update(viewData: viewData)
+    }
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
 
     getOffers()
   }
 
-  func update(favorableOffer: FavorableOffer) {
-    viewModel.update(favorableOffer: favorableOffer)
-  }
+  // MARK: - Private
 
   private func getOffers() {
-    viewModel.output = { [primaryView] viewData in
-      primaryView.update(viewData: viewData)
-    }
     viewModel.getOffers()
   }
 }

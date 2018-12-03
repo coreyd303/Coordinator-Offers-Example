@@ -6,7 +6,7 @@
 protocol OffersCoordinator: Coordinator {
 }
 
-class OffersCoordinatorImplementation: OffersCoordinator {
+class OffersCoordinatorImplementation: BaseCoordinator, OffersCoordinator {
   let router: Router
   let presentableFactory: OffersPresentableFactory
   var offersPresentable: OffersPresentable?
@@ -16,25 +16,32 @@ class OffersCoordinatorImplementation: OffersCoordinator {
     self.presentableFactory = presentableFactory
   }
 
-  func start() {
+    override func start() {
     offersPresentable = presentableFactory.makeOffersPresentable()
     offersPresentable?.output = { [unowned self] offersPresentableOutput in
       switch offersPresentableOutput {
-      case .offer(let favorableOffer):
-        self.showOfferDetail(favorableOffer)
+      case let .offer(offerID):
+        self.showOfferDetail(forOfferID: offerID)
       }
     }
     router.setRootPresentable(offersPresentable!)
   }
 
-  private func showOfferDetail(_ favorableOffer: FavorableOffer) {
-    let offerDetailPresentable = presentableFactory.makeOfferDetailPresentable(favorableOffer: favorableOffer)
-    offerDetailPresentable.output = { [offersPresentable] offerDetailViewOutput in
-      switch offerDetailViewOutput {
-      case .updateOffer(let updatedFavorableOffer):
-        offersPresentable?.update(favorableOffer: updatedFavorableOffer)
+    override func start(with option: DeepLinkOption?) {
+    if let option = option {
+      switch option {
+      case .offers:
+        start()
+      case let .offer(offerID):
+        showOfferDetail(forOfferID: offerID)
       }
     }
+  }
+
+  // MARK: - Private
+
+  private func showOfferDetail(forOfferID offerID: String) {
+    let offerDetailPresentable = presentableFactory.makeOfferDetailsPresentable(offerID: offerID)
     router.push(offerDetailPresentable)
   }
 }

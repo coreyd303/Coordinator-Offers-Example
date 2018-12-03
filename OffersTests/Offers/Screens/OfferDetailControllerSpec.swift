@@ -62,43 +62,19 @@ class OfferDetailControllerSpec: QuickSpec {
         }
 
         context("when view output runs") {
-          context("with favoriteTapped and viewModel with favorableOffer with favored true") {
-            it("viewModel should set updated favorableOffer with favored false") {
-              mockViewModel.stubbedFavorableOffer = FavorableOffer(offer: createOffer(), favored: true)
-
+          context("with favoriteTapped") {
+            it("viewModel should toggleFavored") {
               mockView.invokedOutput?(.favoriteTapped)
 
-              expect(mockViewModel.invokedFavorableOffer).to(equal(FavorableOffer(offer: createOffer(), favored: false)))
+              expect(mockViewModel.invokedToggleFavoredCount).to(equal(1))
             }
-          }
-
-          context("with favoriteTapped and viewModel with favorableOffer with favored false") {
-            it("viewModel should set updated favorableOffer with favored true") {
-              mockViewModel.stubbedFavorableOffer = FavorableOffer(offer: createOffer(), favored: false)
-
-              mockView.invokedOutput?(.favoriteTapped)
-
-              expect(mockViewModel.invokedFavorableOffer).to(equal(FavorableOffer(offer: createOffer(), favored: true)))
-            }
-          }
-
-          it("should output updateOffer with matching favorableOffer from viewModel") {
-            var invokedOutput: OfferDetailPresentableOutput?
-            sut.output = { output in
-              invokedOutput = output
-            }
-            mockViewModel.stubbedFavorableOffer = FavorableOffer(offer: createOffer(), favored: false)
-
-            mockView.invokedOutput?(.favoriteTapped)
-
-            expect(invokedOutput).to(equal(OfferDetailPresentableOutput.updateOffer(mockViewModel.stubbedFavorableOffer!)))
           }
         }
       }
     }
 
     func createOffer(id: String = "0") -> Offer {
-      return Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
+      return Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "", favored: false)
     }
   }
 }

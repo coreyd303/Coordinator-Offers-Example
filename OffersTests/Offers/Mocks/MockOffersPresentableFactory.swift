@@ -16,17 +16,17 @@ class MockOffersPresentableFactory: OffersPresentableFactory {
     return stubbedMakeOffersPresentableResult
   }
 
-  var invokedMakeOfferDetailPresentable = false
-  var invokedMakeOfferDetailPresentableCount = 0
-  var invokedMakeOfferDetailPresentableParameters: (favorableOffer: FavorableOffer, Void)?
-  var invokedMakeOfferDetailPresentableParametersList = [(favorableOffer: FavorableOffer, Void)]()
-  var stubbedMakeOfferDetailPresentableResult: OfferDetailPresentable!
+  var invokedMakeOfferDetailsPresentable = false
+  var invokedMakeOfferDetailsPresentableCount = 0
+  var invokedMakeOfferDetailsPresentableParameters: (offerID: String, Void)?
+  var invokedMakeOfferDetailsPresentableParametersList = [(offerID: String, Void)]()
+  var stubbedMakeOfferDetailsPresentableResult: OfferDetailPresentable!
 
-  func makeOfferDetailPresentable(favorableOffer: FavorableOffer) -> OfferDetailPresentable {
-    invokedMakeOfferDetailPresentable = true
-    invokedMakeOfferDetailPresentableCount += 1
-    invokedMakeOfferDetailPresentableParameters = (favorableOffer, ())
-    invokedMakeOfferDetailPresentableParametersList.append((favorableOffer, ()))
-    return stubbedMakeOfferDetailPresentableResult
+  func makeOfferDetailsPresentable(offerID: String) -> OfferDetailPresentable {
+    invokedMakeOfferDetailsPresentable = true
+    invokedMakeOfferDetailsPresentableCount += 1
+    invokedMakeOfferDetailsPresentableParameters = (offerID, ())
+    invokedMakeOfferDetailsPresentableParametersList.append((offerID, ()))
+    return stubbedMakeOfferDetailsPresentableResult
   }
 }

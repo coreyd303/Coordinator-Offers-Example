@@ -6,26 +6,6 @@
 @testable import Offers
 
 class MockOfferDetailViewModel: OfferDetailViewModel {
-  var invokedFavorableOfferSetter = false
-  var invokedFavorableOfferSetterCount = 0
-  var invokedFavorableOffer: FavorableOffer?
-  var invokedFavorableOfferList = [FavorableOffer]()
-  var invokedFavorableOfferGetter = false
-  var invokedFavorableOfferGetterCount = 0
-  var stubbedFavorableOffer: FavorableOffer!
-  var favorableOffer: FavorableOffer {
-    set {
-      invokedFavorableOfferSetter = true
-      invokedFavorableOfferSetterCount += 1
-      invokedFavorableOffer = newValue
-      invokedFavorableOfferList.append(newValue)
-    }
-    get {
-      invokedFavorableOfferGetter = true
-      invokedFavorableOfferGetterCount += 1
-      return stubbedFavorableOffer
-    }
-  }
   var invokedOutputSetter = false
   var invokedOutputSetterCount = 0
   var invokedOutput: ((OfferDetailViewData) -> Void)?
@@ -45,5 +25,12 @@ class MockOfferDetailViewModel: OfferDetailViewModel {
       invokedOutputGetterCount += 1
       return stubbedOutput
     }
+  }
+  var invokedToggleFavored = false
+  var invokedToggleFavoredCount = 0
+
+  func toggleFavored() {
+    invokedToggleFavored = true
+    invokedToggleFavoredCount += 1
   }
 }

@@ -4,22 +4,16 @@
 //
 
 struct OffersViewData: Equatable {
-  let favorableOffers: [FavorableOffer]
+  let offers: [Offer]
 }
 
 protocol OffersViewModel: class {
-  func getOffers()
-  func update(favorableOffer: FavorableOffer)
-  var offers: [FavorableOffer] { get }
   var output: ((OffersViewData) -> Void)? { get set }
+  func getOffers()
+  func offerID(atIndex index: Int) -> String
 }
 
 class OffersViewModelImplementation: OffersViewModel {
-  private(set) var offers: [FavorableOffer] = [] {
-    didSet {
-      output?(OffersViewData(favorableOffers: offers))
-    }
-  }
   var output: ((OffersViewData) -> Void)?
   let offerService: OfferService
 
@@ -28,15 +22,17 @@ class OffersViewModelImplementation: OffersViewModel {
   }
 
   func getOffers() {
-    offerService.getOffers { [weak self] receivedOffers in
-      self?.offers = receivedOffers.map { FavorableOffer(offer: $0, favored: false) }
-    }
+    outputViewData()
   }
 
-  func update(favorableOffer: FavorableOffer) {
-    if let offerIndex = offers.index(where: { $0.offer.id == favorableOffer.offer.id }) {
-      offers[offerIndex] = favorableOffer
-      output?(OffersViewData(favorableOffers: offers))
-    }
+  func offerID(atIndex index: Int) -> String {
+    return offerService.getOffers()[index].id
+  }
+
+  // MARK: - Private
+
+  private func outputViewData() {
+    let offers = offerService.getOffers()
+    output?(OffersViewData(offers: offers))
   }
 }

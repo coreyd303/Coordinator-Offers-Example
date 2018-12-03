@@ -6,11 +6,10 @@
 protocol AppCoordinator: Coordinator {
 }
 
-class AppCoordinatorImplementation: AppCoordinator {
+class AppCoordinatorImplementation: BaseCoordinator, AppCoordinator {
   let window: WindowProviding
   let coordinatorFactory: AppChildCoordinatorFactory
   let presentableFactory: AppPresentableFactory
-  var offersCoordinator: OffersCoordinator?
 
   init(window: WindowProviding, coordinatorFactory: AppChildCoordinatorFactory, presentableFactory: AppPresentableFactory) {
     self.window = window
@@ -18,10 +17,23 @@ class AppCoordinatorImplementation: AppCoordinator {
     self.presentableFactory = presentableFactory
   }
 
-  func start() {
+  override func start(with option: DeepLinkOption?) {
+    if let option = option {
+      childCoordinators.forEach { coordinator in
+        coordinator.start(with: option)
+      }
+    } else {
+      startOffers()
+    }
+  }
+
+  // MARK: - Private
+
+  private func startOffers() {
     let router = presentableFactory.makeRouter()
     window.setRootPresentable(router)
-    offersCoordinator = coordinatorFactory.makeOffersCoordinator(router: router)
-    offersCoordinator?.start()
+    let offersCoordinator = coordinatorFactory.makeOffersCoordinator(router: router)
+    addDependency(offersCoordinator)
+    offersCoordinator.start()
   }
 }

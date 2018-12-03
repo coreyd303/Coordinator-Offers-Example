@@ -6,15 +6,9 @@
 import UIKit
 
 protocol OfferDetailPresentable: Presentable {
-  var output: ((OfferDetailPresentableOutput) -> Void)? { get set }
-}
-
-enum OfferDetailPresentableOutput: Equatable {
-  case updateOffer(FavorableOffer)
 }
 
 class OfferDetailController: UIViewController, OfferDetailPresentable {
-  var output: ((OfferDetailPresentableOutput) -> Void)?
   let viewModel: OfferDetailViewModel
   private var primaryView: OfferDetailView {
     return view as! OfferDetailView
@@ -45,10 +39,7 @@ class OfferDetailController: UIViewController, OfferDetailPresentable {
     primaryView.output = { [unowned self] viewOutput in
       switch viewOutput {
       case .favoriteTapped:
-        var updatedFavorableOffer = self.viewModel.favorableOffer
-        updatedFavorableOffer.favored = !self.viewModel.favorableOffer.favored
-        self.viewModel.favorableOffer = updatedFavorableOffer
-        self.output?(.updateOffer(self.viewModel.favorableOffer))
+        self.viewModel.toggleFavored()
       }
     }
   }

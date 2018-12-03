@@ -41,38 +41,31 @@ class OffersPresentableFactoryImplementationSpec: QuickSpec {
 
       describe("makeOfferDetailPresentable") {
         it("should return OfferDetailPresentable") {
-          expect(sut.makeOfferDetailPresentable(favorableOffer: createFavorableOffer())).to(beAKindOf(OfferDetailPresentable.self))
+          expect(sut.makeOfferDetailsPresentable(offerID: "")).to(beAKindOf(OfferDetailPresentable.self))
         }
 
         it("should return OfferDetailController") {
-          expect(sut.makeOfferDetailPresentable(favorableOffer: createFavorableOffer())).to(beAKindOf(OfferDetailController.self))
+          expect(sut.makeOfferDetailsPresentable(offerID: "")).to(beAKindOf(OfferDetailController.self))
         }
 
         it("viewModel should be a OfferDetailViewModelImplementation") {
-          expect((sut.makeOfferDetailPresentable(favorableOffer: createFavorableOffer()) as! OfferDetailController).viewModel).to(beAKindOf(OfferDetailViewModelImplementation.self))
+          expect((sut.makeOfferDetailsPresentable(offerID: "") as! OfferDetailController).viewModel).to(beAKindOf(OfferDetailViewModelImplementation.self))
         }
 
-        it("viewModel favorableOffer should match") {
-          let controller = sut.makeOfferDetailPresentable(favorableOffer: createFavorableOffer()) as! OfferDetailController
+        it("viewModel offerID should match") {
+          let controller = sut.makeOfferDetailsPresentable(offerID: "3") as! OfferDetailController
           let viewModel = controller.viewModel as! OfferDetailViewModelImplementation
-          expect(viewModel.favorableOffer).to(equal(createFavorableOffer()))
+          expect(viewModel.offerID).to(equal("3"))
         }
 
-        context("with a different favorable offer") {
+        context("with a different offerID") {
           it("viewModel favorableOffer should match") {
-            let stubFavorableOffer: FavorableOffer = createFavorableOffer(id: "99")
-            let controller = sut.makeOfferDetailPresentable(favorableOffer: stubFavorableOffer) as! OfferDetailController
+            let controller = sut.makeOfferDetailsPresentable(offerID: "99") as! OfferDetailController
             let viewModel = controller.viewModel as! OfferDetailViewModelImplementation
-            expect(viewModel.favorableOffer).to(equal(stubFavorableOffer))
+            expect(viewModel.offerID).to(equal("99"))
           }
         }
       }
-    }
-
-    func createFavorableOffer(id: String = "0") -> FavorableOffer {
-      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
-      let stubFavorableOffer = FavorableOffer(offer: stubOffer, favored: false)
-      return stubFavorableOffer
     }
   }
 }

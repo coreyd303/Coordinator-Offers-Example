@@ -6,14 +6,6 @@
 @testable import Offers
 
 class MockOffersViewModel: OffersViewModel {
-  var invokedOffersGetter = false
-  var invokedOffersGetterCount = 0
-  var stubbedOffers: [FavorableOffer]! = []
-  var offers: [FavorableOffer] {
-    invokedOffersGetter = true
-    invokedOffersGetterCount += 1
-    return stubbedOffers
-  }
   var invokedOutputSetter = false
   var invokedOutputSetterCount = 0
   var invokedOutput: ((OffersViewData) -> Void)?
@@ -44,13 +36,27 @@ class MockOffersViewModel: OffersViewModel {
 
   var invokedUpdate = false
   var invokedUpdateCount = 0
-  var invokedUpdateParameters: (favorableOffer: FavorableOffer, Void)?
-  var invokedUpdateParametersList = [(favorableOffer: FavorableOffer, Void)]()
+  var invokedUpdateParameters: (offer: Offer, Void)?
+  var invokedUpdateParametersList = [(offer: Offer, Void)]()
 
-  func update(favorableOffer: FavorableOffer) {
+  func update(offer: Offer) {
     invokedUpdate = true
     invokedUpdateCount += 1
-    invokedUpdateParameters = (favorableOffer, ())
-    invokedUpdateParametersList.append((favorableOffer, ()))
+    invokedUpdateParameters = (offer, ())
+    invokedUpdateParametersList.append((offer, ()))
+  }
+
+  var invokedOfferID = false
+  var invokedOfferIDCount = 0
+  var invokedOfferIDParameters: (index: Int, Void)?
+  var invokedOfferIDParametersList = [(index: Int, Void)]()
+  var stubbedOfferIDResult: String! = ""
+
+  func offerID(atIndex index: Int) -> String {
+    invokedOfferID = true
+    invokedOfferIDCount += 1
+    invokedOfferIDParameters = (index, ())
+    invokedOfferIDParametersList.append((index, ()))
+    return stubbedOfferIDResult
   }
 }

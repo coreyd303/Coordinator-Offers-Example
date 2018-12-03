@@ -16,7 +16,7 @@ class OffersCoordinatorImplementationSpec: QuickSpec {
       mockOffersPresentable = MockOffersPresentable()
       mockOfferDetailPresentable = MockOfferDetailPresentable()
       mockPresentableFactory.stubbedMakeOffersPresentableResult = mockOffersPresentable
-      mockPresentableFactory.stubbedMakeOfferDetailPresentableResult = mockOfferDetailPresentable
+      mockPresentableFactory.stubbedMakeOfferDetailsPresentableResult = mockOfferDetailPresentable
       sut = OffersCoordinatorImplementation(router: mockRouter, presentableFactory: mockPresentableFactory)
     }
 
@@ -57,15 +57,11 @@ class OffersCoordinatorImplementationSpec: QuickSpec {
         context("when offersPresentable output runs") {
           context("with offer with favorableOffer") {
             beforeEach {
-              mockOffersPresentable.invokedOutput?(.offer(createFavorableOffer()))
+              mockOffersPresentable.invokedOutput?(.offer(offerID: "0"))
             }
 
             it("presentableFactory should makeOfferDetailPresentable") {
-              expect(mockPresentableFactory.invokedMakeOfferDetailPresentableCount).to(equal(1))
-            }
-
-            it("offerDetailPresentable output should not be nil") {
-              expect(mockOfferDetailPresentable.invokedOutput).toNot(beNil())
+              expect(mockPresentableFactory.invokedMakeOfferDetailsPresentableCount).to(equal(1))
             }
 
             it("router should push") {
@@ -73,45 +69,16 @@ class OffersCoordinatorImplementationSpec: QuickSpec {
             }
 
             it("router should push with matching offerDetailPresentable from presentableFactory") {
-              expect(mockRouter.invokedPushParameters?.presentable).to(be(mockPresentableFactory.stubbedMakeOfferDetailPresentableResult))
-            }
-
-            context("when offerDetailPresentable output runs") {
-              context("with updateOffer with updatedFavorableOffer") {
-                it("offersPresentable should update") {
-                  mockOfferDetailPresentable.invokedOutput?(.updateOffer(createFavorableOffer()))
-
-                  expect(mockOffersPresentable.invokedUpdateCount).to(equal(1))
-                }
-
-                it("offersPresentable should update with matching favorableOffer") {
-                  let stubFavorableOffer = createFavorableOffer()
-
-                  mockOfferDetailPresentable.invokedOutput?(.updateOffer(stubFavorableOffer))
-
-                  expect(mockOffersPresentable.invokedUpdateParameters?.favorableOffer).to(equal(stubFavorableOffer))
-                }
-
-                context("with different offer") {
-                  it("offersPresentable should update with matching favorableOffer") {
-                    let stubFavorableOffer = createFavorableOffer(id: "99")
-
-                    mockOfferDetailPresentable.invokedOutput?(.updateOffer(stubFavorableOffer))
-
-                    expect(mockOffersPresentable.invokedUpdateParameters?.favorableOffer).to(equal(stubFavorableOffer))
-                  }
-                }
-              }
+              expect(mockRouter.invokedPushParameters?.presentable).to(be(mockPresentableFactory.stubbedMakeOfferDetailsPresentableResult))
             }
           }
         }
       }
     }
 
-    func createFavorableOffer(id: String = "0") -> FavorableOffer {
-      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "")
-      let stubFavorableOffer = FavorableOffer(offer: stubOffer, favored: false)
-      return stubFavorableOffer
+    func createOffer(id: String = "0") -> Offer {
+      let stubOffer = Offer(id: id, urlString: nil, name: "", description: "", terms: "", currentValue: "", favored: false)
+      return stubOffer
     }
   }
 }

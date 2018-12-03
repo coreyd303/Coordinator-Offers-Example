@@ -27,18 +27,6 @@ class MockOffersPresentable: OffersPresentable {
       return stubbedOutput
     }
   }
-  var invokedUpdate = false
-  var invokedUpdateCount = 0
-  var invokedUpdateParameters: (favorableOffer: FavorableOffer, Void)?
-  var invokedUpdateParametersList = [(favorableOffer: FavorableOffer, Void)]()
-
-  func update(favorableOffer: FavorableOffer) {
-    invokedUpdate = true
-    invokedUpdateCount += 1
-    invokedUpdateParameters = (favorableOffer, ())
-    invokedUpdateParametersList.append((favorableOffer, ()))
-  }
-
   var invokedToPresent = false
   var invokedToPresentCount = 0
   var stubbedToPresentResult: UIViewController!

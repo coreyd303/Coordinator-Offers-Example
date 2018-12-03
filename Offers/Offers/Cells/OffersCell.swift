@@ -79,11 +79,11 @@ class OffersCell: UICollectionViewCell {
 }
 
 extension OffersCell {
-  func configure(for favorableOffer: FavorableOffer) {
-    offerImageView.sd_setImage(with: favorableOffer.offer.url, placeholderImage: Images.placeholder.image)
-    currentValueLabel.text = favorableOffer.offer.currentValue
-    favoriteImageView.image = favorableOffer.favored ? Images.heartSelected.image : Images.heart.image
-    favoriteImageView.accessibilityIdentifier = favorableOffer.favored ? Images.heartSelected.rawValue: Images.heart.rawValue
-    nameLabel.text = favorableOffer.offer.name
+  func configure(for offer: Offer) {
+    offerImageView.sd_setImage(with: offer.url, placeholderImage: Images.placeholder.image)
+    currentValueLabel.text = offer.currentValue
+    favoriteImageView.image = offer.favored ? Images.heartSelected.image : Images.heart.image
+    favoriteImageView.accessibilityIdentifier = offer.favored ? Images.heartSelected.rawValue: Images.heart.rawValue
+    nameLabel.text = offer.name
   }
 }
