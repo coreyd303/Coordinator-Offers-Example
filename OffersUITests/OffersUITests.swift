@@ -25,10 +25,17 @@ class OffersUITests: XCTestCase {
   }
 
   func test_changing_offer_favorite_status() {
-    XCTAssertTrue(app.collectionViews.cells.firstMatch.images["Heart"].exists)
-    app.collectionViews.cells.firstMatch.tap()
-    app.tables.buttons["Heart"].tap()
-    app.navigationBars["Offer Detail"].buttons["Offers"].tap()
-    XCTAssertTrue(app.collectionViews.cells.firstMatch.images["HeartSelected"].exists)
+    // Because local data may have been set from previous runs, just expect the favorited state to be toggled from whatever it was
+    if app.collectionViews.cells.firstMatch.images["Heart"].exists {
+      app.collectionViews.cells.firstMatch.tap()
+      app.tables.buttons["Heart"].tap()
+      app.navigationBars["Offer Detail"].buttons["Offers"].tap()
+      XCTAssertTrue(app.collectionViews.cells.firstMatch.images["HeartSelected"].exists)
+    } else {
+      app.collectionViews.cells.firstMatch.tap()
+      app.tables.buttons["Heart"].tap()
+      app.navigationBars["Offer Detail"].buttons["Offers"].tap()
+      XCTAssertTrue(app.collectionViews.cells.firstMatch.images["Heart"].exists)
+    }
   }
 }

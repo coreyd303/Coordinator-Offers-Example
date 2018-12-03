@@ -10,7 +10,7 @@ struct DeepLinkKey {
   static let offer = "offer"
 }
 
-enum DeepLinkOption {
+enum DeepLinkOption: Equatable {
   case offers
   case offer(String)
 

@@ -32,37 +32,59 @@ class AppCoordinatorImplementationSpec: QuickSpec {
         expect(sut).to(beAKindOf(AppCoordinator.self))
       }
 
-      describe("start") {
-        beforeEach {
-          sut.start()
+      describe("start with option") {
+        context("with option") {
+          it("childCoordinators should start") {
+            let stubCoordinator = MockCoordinator()
+            sut.childCoordinators = [stubCoordinator]
+
+            sut.start(with: .offers)
+
+            expect(stubCoordinator.invokedStartWithCount).to(equal(1))
+          }
+
+          it("childCoordinators should start") {
+            let stubCoordinator = MockCoordinator()
+            sut.childCoordinators = [stubCoordinator]
+
+            sut.start(with: .offers)
+
+            expect(stubCoordinator.invokedStartWithParameters?.option).to(equal(DeepLinkOption.offers))
+          }
         }
 
-        it("presentableFactory should makeRouter") {
-          expect(mockAppPresentableFactory.invokedMakeRouterCount).to(equal(1))
-        }
+        context("with nil option") {
+          beforeEach {
+            sut.start()
+          }
 
-        it("window should setRootPresentable") {
-          expect(mockWindow.invokedSetRootPresentableCount).to(equal(1))
-        }
+          it("presentableFactory should makeRouter") {
+            expect(mockAppPresentableFactory.invokedMakeRouterCount).to(equal(1))
+          }
 
-        it("window should setRootPresentable with router from presentableFactory") {
-          expect(mockWindow.invokedSetRootPresentableParameters?.presentable).to(be(mockAppPresentableFactory.stubbedMakeRouterResult))
-        }
+          it("window should setRootPresentable") {
+            expect(mockWindow.invokedSetRootPresentableCount).to(equal(1))
+          }
 
-        it("coordinatorFactory should makeOffersCoordinator") {
-          expect(mockAppChildCoordinatorFactory.invokedMakeOffersCoordinatorCount).to(equal(1))
-        }
+          it("window should setRootPresentable with router from presentableFactory") {
+            expect(mockWindow.invokedSetRootPresentableParameters?.presentable).to(be(mockAppPresentableFactory.stubbedMakeRouterResult))
+          }
 
-        it("coordinatorFactory should makeOffersCoordinator with matching router from presentableFactory") {
-          expect(mockAppChildCoordinatorFactory.invokedMakeOffersCoordinatorParameters?.router).to(be(mockAppPresentableFactory.stubbedMakeRouterResult))
-        }
+          it("coordinatorFactory should makeOffersCoordinator") {
+            expect(mockAppChildCoordinatorFactory.invokedMakeOffersCoordinatorCount).to(equal(1))
+          }
 
-        it("should add dependency with offersCoordinator from coordinatorFactory") {
-          expect(sut.childCoordinators.contains(where: { $0 === mockAppChildCoordinatorFactory.stubbedMakeOffersCoordinatorResult })).to(beTrue())
-        }
+          it("coordinatorFactory should makeOffersCoordinator with matching router from presentableFactory") {
+            expect(mockAppChildCoordinatorFactory.invokedMakeOffersCoordinatorParameters?.router).to(be(mockAppPresentableFactory.stubbedMakeRouterResult))
+          }
 
-        it("offersCoordinator should start") {
-          expect(mockOffersCoordinator.invokedStartCount).to(equal(1))
+          it("should add dependency with offersCoordinator from coordinatorFactory") {
+            expect(sut.childCoordinators.contains(where: { $0 === mockAppChildCoordinatorFactory.stubbedMakeOffersCoordinatorResult })).to(beTrue())
+          }
+
+          it("offersCoordinator should start") {
+            expect(mockOffersCoordinator.invokedStartCount).to(equal(1))
+          }
         }
       }
     }

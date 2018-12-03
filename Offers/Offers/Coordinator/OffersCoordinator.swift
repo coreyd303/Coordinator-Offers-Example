@@ -16,7 +16,22 @@ class OffersCoordinatorImplementation: BaseCoordinator, OffersCoordinator {
     self.presentableFactory = presentableFactory
   }
 
-    override func start() {
+  override func start(with option: DeepLinkOption?) {
+    if let option = option {
+      switch option {
+      case .offers:
+        showOffers()
+      case let .offer(offerID):
+        showOfferDetail(forOfferID: offerID)
+      }
+    } else {
+      showOffers()
+    }
+  }
+
+  // MARK: - Private
+
+  private func showOffers() {
     offersPresentable = presentableFactory.makeOffersPresentable()
     offersPresentable?.output = { [unowned self] offersPresentableOutput in
       switch offersPresentableOutput {
@@ -26,19 +41,6 @@ class OffersCoordinatorImplementation: BaseCoordinator, OffersCoordinator {
     }
     router.setRootPresentable(offersPresentable!)
   }
-
-    override func start(with option: DeepLinkOption?) {
-    if let option = option {
-      switch option {
-      case .offers:
-        start()
-      case let .offer(offerID):
-        showOfferDetail(forOfferID: offerID)
-      }
-    }
-  }
-
-  // MARK: - Private
 
   private func showOfferDetail(forOfferID offerID: String) {
     let offerDetailPresentable = presentableFactory.makeOfferDetailsPresentable(offerID: offerID)

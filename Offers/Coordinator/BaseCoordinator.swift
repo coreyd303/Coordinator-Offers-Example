@@ -10,9 +10,10 @@ class BaseCoordinator: Coordinator {
     start(with: nil)
   }
 
-  func start(with option: DeepLinkOption?) { }
+  func start(with option: DeepLinkOption?) {
+    fatalError("BaseCoordinator must be subclassed and start with option needs overridden")
+  }
 
-  // add only unique object
   func addDependency(_ coordinator: Coordinator) {
     guard !childCoordinators.contains(where: { $0 === coordinator }) else { return }
     childCoordinators.append(coordinator)
@@ -24,7 +25,6 @@ class BaseCoordinator: Coordinator {
       let coordinator = coordinator
       else { return }
 
-    // Clear child-coordinators recursively
     if let coordinator = coordinator as? BaseCoordinator, !coordinator.childCoordinators.isEmpty {
       coordinator.childCoordinators
         .filter({ $0 !== coordinator })
