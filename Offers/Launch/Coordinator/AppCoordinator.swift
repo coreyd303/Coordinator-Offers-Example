@@ -34,6 +34,9 @@ class AppCoordinatorImplementation: BaseCoordinator, AppCoordinator {
     window.setRootPresentable(router)
     let offersCoordinator = coordinatorFactory.makeOffersCoordinator(router: router)
     addDependency(offersCoordinator)
+    offersCoordinator.didFinish = { [weak self] in
+      self?.removeDependency(offersCoordinator)
+    }
     offersCoordinator.start()
   }
 }

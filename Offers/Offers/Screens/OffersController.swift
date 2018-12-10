@@ -7,6 +7,7 @@ import UIKit
 
 protocol OffersPresentable: Presentable {
   var output: ((OffersPresentableOutput) -> ())? { get set }
+  var finish: (() -> Void)? { get set }
 }
 
 enum OffersPresentableOutput: Equatable {
@@ -15,6 +16,7 @@ enum OffersPresentableOutput: Equatable {
 
 class OffersController: UIViewController, OffersPresentable {
   var output: ((OffersPresentableOutput) -> ())?
+  var finish: (() -> Void)?
   let viewModel: OffersViewModel
   private var primaryView: OffersView {
     return view as! OffersView
@@ -54,6 +56,14 @@ class OffersController: UIViewController, OffersPresentable {
     super.viewWillAppear(animated)
 
     getOffers()
+  }
+
+  override func didMove(toParent parent: UIViewController?) {
+    super.didMove(toParent: parent)
+
+    if parent == nil {
+      finish?()
+    }
   }
 
   // MARK: - Private

@@ -72,6 +72,21 @@ class OffersControllerSpec: QuickSpec {
           }
         }
       }
+
+      describe("didMove") {
+        context("to nil parent") {
+          it("should run finish") {
+            var invokedFinishCount = 0
+            sut.finish = {
+              invokedFinishCount += 1
+            }
+
+            sut.didMove(toParent: nil)
+
+            expect(invokedFinishCount).to(equal(1))
+          }
+        }
+      }
     }
 
     func createOffer(id: String = "0") -> Offer {

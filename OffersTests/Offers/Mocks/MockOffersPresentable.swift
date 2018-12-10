@@ -27,6 +27,26 @@ class MockOffersPresentable: OffersPresentable {
       return stubbedOutput
     }
   }
+  var invokedFinishSetter = false
+  var invokedFinishSetterCount = 0
+  var invokedFinish: (() -> Void)?
+  var invokedFinishList = [(() -> Void)?]()
+  var invokedFinishGetter = false
+  var invokedFinishGetterCount = 0
+  var stubbedFinish: (() -> Void)!
+  var finish: (() -> Void)? {
+    set {
+      invokedFinishSetter = true
+      invokedFinishSetterCount += 1
+      invokedFinish = newValue
+      invokedFinishList.append(newValue)
+    }
+    get {
+      invokedFinishGetter = true
+      invokedFinishGetterCount += 1
+      return stubbedFinish
+    }
+  }
   var invokedToPresent = false
   var invokedToPresentCount = 0
   var stubbedToPresentResult: UIViewController!

@@ -4,11 +4,13 @@
 //
 
 protocol OffersCoordinator: Coordinator {
+  var didFinish: (() -> Void)? { get set }
 }
 
 class OffersCoordinatorImplementation: BaseCoordinator, OffersCoordinator {
   let router: Router
   let presentableFactory: OffersPresentableFactory
+  var didFinish: (() -> Void)?
   var offersPresentable: OffersPresentable?
 
   init(router: Router, presentableFactory: OffersPresentableFactory) {
@@ -38,6 +40,9 @@ class OffersCoordinatorImplementation: BaseCoordinator, OffersCoordinator {
       case let .offer(offerID):
         self.showOfferDetail(forOfferID: offerID)
       }
+    }
+    offersPresentable?.finish = { [weak self] in
+      self?.didFinish?()
     }
     router.setRootPresentable(offersPresentable!)
   }

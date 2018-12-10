@@ -6,6 +6,26 @@
 @testable import Offers
 
 class MockOffersCoordinator: OffersCoordinator {
+  var invokedDidFinishSetter = false
+  var invokedDidFinishSetterCount = 0
+  var invokedDidFinish: (() -> Void)?
+  var invokedDidFinishList = [(() -> Void)?]()
+  var invokedDidFinishGetter = false
+  var invokedDidFinishGetterCount = 0
+  var stubbedDidFinish: (() -> Void)!
+  var didFinish: (() -> Void)? {
+    set {
+      invokedDidFinishSetter = true
+      invokedDidFinishSetterCount += 1
+      invokedDidFinish = newValue
+      invokedDidFinishList.append(newValue)
+    }
+    get {
+      invokedDidFinishGetter = true
+      invokedDidFinishGetterCount += 1
+      return stubbedDidFinish
+    }
+  }
   var invokedStart = false
   var invokedStartCount = 0
 
